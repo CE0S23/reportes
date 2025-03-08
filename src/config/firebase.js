@@ -1,23 +1,21 @@
-// Importamos las funciones necesarias de Firebase
-import { initializeApp } from "firebase/app"; // Inicializa la aplicación Firebase
-import { getFirestore } from "firebase/firestore"; // Obtiene acceso a Firestore (base de datos)
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Configuración de Firebase con las credenciales del proyecto
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCE1g7p8rb-p16597mnMS5XKlMdKEcwxLg",
-    authDomain: "miapp-integral-c8b55.firebaseapp.com",
-    projectId: "miapp-integral-c8b55",
-    storageBucket: "miapp-integral-c8b55.firebasestorage.app",
-    messagingSenderId: "644041227833",
-    appId: "1:644041227833:web:2d45bfdcb528d1362017e8",
-    measurementId: "G-JD54KX4L3V"
-  };
+  apiKey: "AIzaSyAN4pgUSycF0NK0oQGBnbKIblcD2ne25cE",
+  authDomain: "integral-859fb.firebaseapp.com",
+  projectId: "integral-859fb",
+  storageBucket: "integral-859fb.firebasestorage.app",
+  messagingSenderId: "837408312914",
+  appId: "1:837408312914:web:62528c74bb449ed12c998b",
+  measurementId: "G-94T5R8YQZV"
+};
 
-// Inicializa la aplicación Firebase con la configuración proporcionada
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Obtiene una instancia de la base de datos Firestore
-const db = getFirestore(app);
-
-// Exportamos la instancia de Firestore para poder usarla en otros archivos de React
-export { db };
+const analytics = getAnalytics(app);
